@@ -1,15 +1,15 @@
-# File: .github/workflows/repo-sync.yml
-
 name: sync-upstream
 
 on:
   schedule:
   - cron:  "*/15 * * * *"
+    
 jobs:
-  repo-sync:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      
     - name: repo-sync
       uses: repo-sync/github-sync@v2
       with:
