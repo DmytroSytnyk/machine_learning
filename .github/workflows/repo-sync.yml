@@ -1,7 +1,5 @@
 # File: .github/workflows/repo-sync.yml
-- name: GitHub Repo Sync
-  uses: repo-sync/github-sync@v2.0.0
-
+name: Sync with upstream
 on:
   schedule:
   - cron:  "*/15 * * * *"
